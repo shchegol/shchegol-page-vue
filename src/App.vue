@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="background">
+  <div id="app">
     <div class="container">
       <router-view/>
     </div>
@@ -13,5 +13,5 @@
 </script>
 
 <style lang="scss">
-  @import 'assets/scss/app.scss';
+  @import './assets/scss/app.scss';
 </style>

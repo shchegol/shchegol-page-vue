@@ -1,0 +1,11 @@
+.card {
+  padding: $spacer $spacer*2;
+  border-radius: $border-radius;
+  background-color: #fff;
+  @include box_shadow(1);
+
+  &__separator {
+    margin-right: -$spacer*2;
+    margin-left: -$spacer*2;
+  }
+}

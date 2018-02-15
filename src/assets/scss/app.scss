@@ -1,4 +1,4 @@
-// Bootstrap global
+// bootstrap global
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
@@ -6,6 +6,8 @@
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/grid";
 
-$border-radius: 2px !default;
-
-@import "./base";
+// custom
+@import "./common/variables";
+@import "./common/base";
+@import "./common/utils";
+@import "./components/card";
