@@ -1,6 +1,6 @@
 <template>
-  <main class="row align-items-center">
-    <div class="col card">
+  <main class="row align-items-center justify-content-center">
+    <div class="col-8 card">
       <div class="row">
         <header class="col">
           <h1 class="m-0">Alexander Shchegol</h1>
@@ -12,7 +12,9 @@
 
       <section class="row">
         <article class="col">
-          123
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Accusamus assumenda consequatur odit omnis quas. Culpa eveniet, id ipsa laboriosam quas qui rerum. Ab blanditiis error molestiae,
+          molestias nesciunt placeat repellendus?
         </article>
       </section>
     </div>
