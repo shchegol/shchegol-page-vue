@@ -1,9 +1,9 @@
 <template>
   <main class="row">
     <section class="col">
-      <h4>
+      <h3>
         About
-      </h4>
+      </h3>
 
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.

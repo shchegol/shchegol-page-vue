@@ -2,7 +2,11 @@
   <nav>
     <menu class="main-menu">
       <li class="main-menu__item">
-        <router-link to="/about" active-class="main-menu__link_active" class="main-menu__link" exact>О себе</router-link>
+        <router-link to="/" active-class="main-menu__link_active" class="main-menu__link" exact>Контакты</router-link>
+      </li>
+
+      <li class="main-menu__item">
+        <router-link to="/about" active-class="main-menu__link_active" class="main-menu__link">О себе</router-link>
       </li>
 
       <li class="main-menu__item">

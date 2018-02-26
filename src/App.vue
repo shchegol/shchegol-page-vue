@@ -2,14 +2,16 @@
   <div id="app" class="container main-container">
     <div class="row justify-content-center">
       <div class="col-8 card">
-        <div class="row">
-          <header class="col text-center">
-            <h1 class="m-0">Alexander Shchegol</h1>
-            <p>Frontend Developer</p>
-          </header>
-        </div>
+        <header>
+          <div class="row">
+            <div class="col text-center">
+              <h1 class="m-0">Александр Щеголь</h1>
+              <p>Frontend Developer</p>
+            </div>
+          </div>
 
-        <main-menu></main-menu>
+          <main-menu></main-menu>
+        </header>
 
         <router-view/>
       </div>
