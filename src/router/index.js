@@ -6,6 +6,8 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-    { path: '/', component: () => import('@/components/pages/Index.vue')},
+    {path: '/', component: () => import('@/components/pages/Index.vue')},
+    {path: '/about', component: () => import('@/components/pages/About.vue')},
+    {path: '/skills', component: () => import('@/components/pages/Skills.vue')},
   ]
 })

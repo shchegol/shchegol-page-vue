@@ -30,6 +30,11 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $font-family-title;
   font-weight: 400;
+  line-height: 1;
+}
+
+p {
+  margin: 0
 }
 
 hr {
@@ -38,3 +43,7 @@ hr {
   background-color: $gray-300;
 }
 
+.main-container {
+  margin-top: 15%;
+  transition: margin-top .3s ease, max-width .3s ease;
+}
