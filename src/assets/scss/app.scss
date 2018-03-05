@@ -8,10 +8,11 @@
 
 // custom
 @import "./common/variables";
-@import "./common/base";
 @import "./common/utils";
+@import "./common/base";
 @import "./common/reset";
 @import "./layout/main";
 @import "./layout/header";
 @import "./layout/navigation";
 @import "./components/card";
+@import "./components/blob";
