@@ -43,8 +43,8 @@
         numPoints: 5,
         centerX: 500,
         centerY: 500,
-        minRadius: 300,
-        maxRadius: 325,
+        minRadius: 350,
+        maxRadius: 425,
         minDuration: 5,
         maxDuration: 10
       })
