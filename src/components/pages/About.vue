@@ -16,6 +16,9 @@
 
 <script>
   export default {
-    name: 'skills'
+    name: 'skills',
+    mounted() {
+      this.$parent.$refs.blob.style.fill = '#2196F3'
+    }
   }
 </script>

@@ -2,7 +2,7 @@
   <main class="row">
     <section class="col">
       <h3>
-        Контакты
+        Contacts
       </h3>
 
       <p>
@@ -16,6 +16,9 @@
 
 <script>
   export default {
-    name: 'index'
+    name: 'contacts',
+    mounted() {
+        this.$parent.$refs.blob.style.fill = '#3F51B5'
+    }
   }
 </script>

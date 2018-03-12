@@ -5,8 +5,8 @@
         <header>
           <div class="row">
             <div class="col text-center">
-              <h1 class="m-0">Александр Щеголь</h1>
-              <p>Frontend Developer</p>
+              <h1 class="m-0">Alexander Shchegol</h1>
+              <p>Frontend Developer from scratch</p>
             </div>
           </div>
 
