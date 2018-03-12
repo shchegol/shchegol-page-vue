@@ -16,9 +16,6 @@
 
 <script>
   export default {
-    name: 'contacts',
-    mounted() {
-        this.$parent.$refs.blob.style.fill = '#3F51B5'
-    }
+    name: 'contacts'
   }
 </script>

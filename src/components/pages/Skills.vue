@@ -15,12 +15,7 @@
 </template>
 
 <script>
-  import { createBlob } from '../../assets/js/common'
-
   export default {
-    name: 'skills',
-    mounted() {
-      this.$parent.$refs.blob.style.fill = '#E91E63'
-    }
+    name: 'skills'
   }
 </script>
