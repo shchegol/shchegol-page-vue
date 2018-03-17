@@ -1,15 +1,11 @@
 <template>
   <main class="row">
-    <section class="col">
-      <h3>
-        Contacts
-      </h3>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Accusamus assumenda consequatur odit omnis quas. Culpa eveniet, id ipsa laboriosam quas qui rerum. Ab blanditiis error molestiae,
-        molestias nesciunt placeat repellendus?
-      </p>
+    <section class="col card">
+      <div class="social">
+        <a href="#" class="social__item social__item_mail"></a>
+        <a href="#" class="social__item social__item_telegram"></a>
+        <a href="#" class="social__item social__item_vk"></a>
+      </div>
     </section>
   </main>
 </template>

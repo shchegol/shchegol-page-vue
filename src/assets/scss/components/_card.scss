@@ -1,8 +1,5 @@
 .card {
-  overflow: hidden;
-  padding: 0;
-  border-radius: $border-radius;
-  background-color: #fff;
-  @include box_shadow(1);
-  transition: width 3s ease;
+  min-height: 135px;
+  font-weight: 300;
+  text-align: center;
 }

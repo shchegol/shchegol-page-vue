@@ -1,14 +1,12 @@
 <template>
   <main class="row">
-    <section class="col">
-      <h3>
-        About
-      </h3>
+    <section class="col card">
+      <p>
+        The best part of my life I worked as a frontend developer in a huge company or group of people involved in some startup. Now I want to offer my skills to solve you problem.
+      </p>
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Accusamus assumenda consequatur odit omnis quas. Culpa eveniet, id ipsa laboriosam quas qui rerum. Ab blanditiis error molestiae,
-        molestias nesciunt placeat repellendus?
+        I can help you in creating a web layout and make it a live. I realy like vuejs and tasks linked with it. In my work I try to be neat and fast.
       </p>
     </section>
   </main>

@@ -3,16 +3,14 @@
     <div class="container loading" :class="{done: !loading}">
       <div class="row justify-content-center">
         <div class="col col-md-6">
-          <header>
             <div class="row">
-              <div class="col text-center">
-                <h1 class="m-0">Alexander Shchegol</h1>
-                <p>Frontend Developer from scratch</p>
-              </div>
+              <header class="col text-center">
+                <p class="">Frontend Developer</p>
+                <h1 class="main-title">Alexander Shchegol</h1>
+              </header>
             </div>
 
             <main-menu></main-menu>
-          </header>
 
           <router-view/>
         </div>
@@ -28,7 +26,7 @@
 
 <script>
   import MainMenu from './components/MainMenu'
-  import { createBlob } from './assets/js/common'
+  import { createBlob, randomNotRepeat, random } from './assets/js/common'
 
   export default {
     components: {MainMenu},
@@ -47,6 +45,7 @@
         window.addEventListener('resize', this.handleResize)
       }
 
+      this.changeColor()
       this.loading = false
     },
     watch: {
@@ -65,10 +64,10 @@
 
         self.blob = createBlob({
           element: self.$refs.blob,
-          numPoints: 5,
+          numPoints:  Math.floor(random(3, 6)),
           centerX: 500,
           centerY: 500,
-          minRadius: 400,
+          minRadius: 385,
           maxRadius: 425,
           minDuration: 8,
           maxDuration: 10
@@ -81,21 +80,15 @@
           '#3F51B5', '#2196F3',
           '#009688', '#4CAF50',
           '#8BC34A', '#FF9800',
-          '#FF5722', '#795548',
-          '#9E9E9E', '#607D8B'
+          '#FF5722', '#795548'
         ]
 
-        this.colorNum = getRandomInt(colors.length, this.colorNum)
+        this.colorNum = randomNotRepeat(colors.length, this.colorNum)
 
         this.$refs.blob.style.fill = colors[this.colorNum]
         this.$refs.bg.style.backgroundColor = colors[this.colorNum]
       }
     }
-  }
-
-  let getRandomInt = (max, oldNum) => {
-    let newNum = Math.floor(Math.random() * max)
-    return newNum === oldNum ? getRandomInt(max, oldNum) : newNum
   }
 </script>
 
