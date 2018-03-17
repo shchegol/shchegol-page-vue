@@ -28,39 +28,40 @@
 
 <script>
   import MainMenu from './components/MainMenu'
-  import {createBlob} from './assets/js/common'
+  import { createBlob } from './assets/js/common'
 
   export default {
     components: {MainMenu},
     name: 'App',
-    data() {
+    data () {
       return {
         blob: null,
-        loading: true
+        loading: true,
+        colorNum: 0
       }
     },
-    mounted() {
+    mounted () {
       if (this.$el.clientWidth > 767) {
         this.initBlob()
       } else {
-        window.addEventListener('resize', this.handleResize);
+        window.addEventListener('resize', this.handleResize)
       }
 
       this.loading = false
     },
     watch: {
-      $route() {
+      $route () {
         this.changeColor()
       }
     },
     methods: {
-      handleResize() {
+      handleResize () {
         if (this.$el.clientWidth > 767 && this.blob === null) {
           this.initBlob()
         }
       },
-      initBlob() {
-        let self = this;
+      initBlob () {
+        let self = this
 
         self.blob = createBlob({
           element: self.$refs.blob,
@@ -73,7 +74,7 @@
           maxDuration: 10
         })
       },
-      changeColor() {
+      changeColor () {
         let colors = [
           '#f44336', '#E91E63',
           '#9C27B0', '#673AB7',
@@ -82,12 +83,19 @@
           '#8BC34A', '#FF9800',
           '#FF5722', '#795548',
           '#9E9E9E', '#607D8B'
-        ];
-        let randomNum = Math.floor(Math.random() * colors.length);
-        this.$refs.blob.style.fill = colors[randomNum];
-        this.$refs.bg.style.backgroundColor = colors[randomNum];
+        ]
+
+        this.colorNum = getRandomInt(colors.length, this.colorNum)
+
+        this.$refs.blob.style.fill = colors[this.colorNum]
+        this.$refs.bg.style.backgroundColor = colors[this.colorNum]
       }
     }
+  }
+
+  let getRandomInt = (max, oldNum) => {
+    let newNum = Math.floor(Math.random() * max)
+    return newNum === oldNum ? getRandomInt(max, oldNum) : newNum
   }
 </script>
 
