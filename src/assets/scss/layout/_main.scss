@@ -14,6 +14,10 @@ main {
   align-content: center;
   justify-content: center;
   overflow: auto;
+
+  @include media-breakpoint-down(sm) {
+    min-height: 0;
+  }
 }
 
 .background {
