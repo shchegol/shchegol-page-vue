@@ -45,7 +45,7 @@
         window.addEventListener('resize', this.handleResize)
       }
 
-      this.changeColor()
+      this.changeColor();
       this.loading = false
     },
     watch: {
@@ -60,11 +60,11 @@
         }
       },
       initBlob () {
-        let self = this
+        let self = this;
 
         self.blob = createBlob({
           element: self.$refs.blob,
-          numPoints:  Math.floor(random(3, 6)),
+          numPoints:  Math.floor(random(4, 7)),
           centerX: 500,
           centerY: 500,
           minRadius: 385,
@@ -75,17 +75,20 @@
       },
       changeColor () {
         let colors = [
-          '#f44336', '#E91E63',
-          '#9C27B0', '#673AB7',
-          '#3F51B5', '#2196F3',
-          '#009688', '#4CAF50',
-          '#8BC34A', '#FF9800',
-          '#FF5722', '#795548'
-        ]
+          '#9C27B0',
+          '#673AB7',
+          '#3F51B5',
+          '#2196F3',
+          '#03A9F4',
+          '#009688',
+          '#4CAF50',
+          '#8BC34A',
+          '#FF9800',
+        ];
 
-        this.colorNum = randomNotRepeat(colors.length, this.colorNum)
+        this.colorNum = randomNotRepeat(colors.length, this.colorNum);
 
-        this.$refs.blob.style.fill = colors[this.colorNum]
+        this.$refs.blob.style.fill = colors[this.colorNum];
         this.$refs.bg.style.backgroundColor = colors[this.colorNum]
       }
     }

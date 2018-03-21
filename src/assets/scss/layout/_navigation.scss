@@ -1,24 +1,49 @@
 .main-menu {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  list-style: none;
+  position: relative;
+  margin-top: 3rem;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
 
   &__link {
+    position: relative;
+    z-index: 1;
     display: block;
-    padding: 1.25rem .75rem;
-    font-size: .875rem;
-    font-weight: 500;
+    width: 100%;
+    padding: 4px 8px;
+    font-size: 1rem;
+    font-weight: 700;
     line-height: 1;
     color: #fff;
     text-transform: uppercase;
+    text-decoration: none;
 
     &:hover {
       color: #fff;
+      text-decoration: none;
     }
 
     &_active {
-      text-decoration: underline
     }
+  }
+
+  &__underline {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    height: 24px;
+    background-color: red;
+    border-radius: 1000px;
+    transition: transform .3s ease,
+    width .3s ease;
   }
 }

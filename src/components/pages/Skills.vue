@@ -1,6 +1,10 @@
 <template>
   <main class="row">
     <section class="col card">
+      <p>
+        I realy like vuejs and tasks linked with it.
+        <br>In my work I try to be neat and fast.
+      </p>
       <div class="skills">
         <div class="skills__item skills__item_html">HTML5</div>
         <div class="skills__item skills__item_css">CSS3</div>
