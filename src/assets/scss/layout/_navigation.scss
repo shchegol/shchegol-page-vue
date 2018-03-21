@@ -1,4 +1,4 @@
-.main-menu {
+.menu {
   position: relative;
   margin-top: 3rem;
 
@@ -43,7 +43,11 @@
     height: 24px;
     background-color: red;
     border-radius: 1000px;
-    transition: transform .3s ease,
-    width .3s ease;
+
+    &.done {
+      transition: transform .5s ease,
+      width .3s linear,
+      opacity .3s ease;
+    }
   }
 }

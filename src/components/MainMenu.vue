@@ -1,21 +1,21 @@
 <template>
   <div class="row justify-content-center">
     <div class="col-auto">
-      <nav class="main-menu">
-        <ul class="main-menu__list">
-          <li class="main-menu__item">
-            <router-link to="/" active-class="main-menu__link_active" class="main-menu__link" exact>Contacts</router-link>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <router-link to="/" active-class="menu__link_active" class="menu__link" exact>Contacts</router-link>
           </li>
 
-          <li class="main-menu__item">
-            <router-link to="/about" active-class="main-menu__link_active" class="main-menu__link">About</router-link>
+          <li class="menu__item">
+            <router-link to="/about" active-class="menu__link_active" class="menu__link">About</router-link>
           </li>
 
-          <li class="main-menu__item">
-            <router-link to="/skills" active-class="main-menu__link_active" class="main-menu__link">Skills</router-link>
+          <li class="menu__item">
+            <router-link to="/skills" active-class="menu__link_active" class="menu__link">Skills</router-link>
           </li>
         </ul>
-        <div class="main-menu__underline"></div>
+        <div ref="underline" class="menu__underline loading" :class="{done: !firstCall}"></div>
       </nav>
     </div>
   </div>
@@ -29,18 +29,24 @@
         firstCall: true
       }
     },
+    mounted() {
+      setTimeout(() => {
+        this.changeUnderline();
+        this.firstCall = false;
+      }, 1000)
+    },
     watch: {
       $route() {
-        setTimeout(() => {
+        if(this.firstCall) return;
+        this.$nextTick(()=>{
           this.changeUnderline()
-        }, 100)
+        })
       }
     },
     methods: {
       changeUnderline() {
-        let underline = document.getElementsByClassName('main-menu__underline')[0];
-        let activeLink = document.getElementsByClassName('main-menu__link_active')[0];
-
+        let underline = this.$refs.underline;
+        let activeLink = document.getElementsByClassName('menu__link_active')[0];
         underline.style.transform = `translateX(${activeLink.offsetLeft}px)`;
         underline.style.width = `${activeLink.clientWidth}px`;
       }
