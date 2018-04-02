@@ -4,11 +4,19 @@
   "description": "A Vue.js project",
   "author": "Alexander Shchegol <zelenzoom@gmail.com>",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "node server.js",
+    "start": "node index.js",
     "build": "node build/build.js"
   },
+  "keywords": [
+    "node",
+    "express",
+    "vue",
+    "heroku",
+    "shchegol"
+  ],
   "dependencies": {
     "bootstrap": "^4.0.0",
     "express": "^4.16.3",
@@ -56,6 +64,10 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shchegol/vue-shchegol-page.git"
+  },
   "engines": {
     "node": ">= 9.0.0",
     "npm": ">= 5.0.0"
@@ -64,5 +76,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "license": "MIT"
 }
