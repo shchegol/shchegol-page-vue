@@ -9,5 +9,6 @@ export default new Router({
     {path: '/', component: () => import('@/components/pages/Contacts.vue')},
     {path: '/about', component: () => import('@/components/pages/About.vue')},
     {path: '/skills', component: () => import('@/components/pages/Skills.vue')},
+    {path: '/404', component: () => import('@/components/pages/Skills.vue')},
   ]
 })
