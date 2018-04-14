@@ -27,7 +27,8 @@
 
 <script>
   import MainMenu from './components/MainMenu'
-  import {createBlob, randomNotRepeat, random} from './assets/js/common'
+  import {randomNotRepeat, random} from './assets/js/common'
+  import Blob from './assets/js/blob'
 
   export default {
     components: {MainMenu},
@@ -58,7 +59,7 @@
       initBlob() {
         let self = this;
 
-        self.blob = createBlob({
+        self.blob = Blob({
           element: self.$refs.blob,
           numPoints: Math.floor(random(3, 5)),
           centerX: 500,
