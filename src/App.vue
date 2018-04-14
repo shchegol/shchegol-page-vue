@@ -5,7 +5,7 @@
         <div class="col col-md-6">
           <div class="row">
             <header class="col text-center">
-              <p class="">Frontend Developer</p>
+              <p>Frontend Developer</p>
               <h1 class="main-title">Alexander Shchegol</h1>
             </header>
           </div>
@@ -27,13 +27,13 @@
 
 <script>
   import MainMenu from './components/MainMenu'
-  import {randomNotRepeat, random} from './assets/js/common'
+  import { randomNotRepeat, random } from './assets/js/common'
   import Blob from './assets/js/blob'
 
   export default {
     components: {MainMenu},
     name: 'App',
-    data() {
+    data () {
       return {
         blob: null,
         loading: true,
@@ -41,36 +41,30 @@
         year: '2018'
       }
     },
-    mounted() {
+    mounted () {
       if (this.$el.clientWidth > 767) {
         this.initBlob()
       }
 
-      setTimeout(()=>{
+      setTimeout(() => {
         this.loading = false
       }, 200)
     },
     watch: {
-      $route() {
+      $route () {
         this.changeColor()
       }
     },
     methods: {
-      initBlob() {
-        let self = this;
+      initBlob () {
+        let self = this
 
-        self.blob = Blob({
-          element: self.$refs.blob,
-          numPoints: Math.floor(random(3, 5)),
-          centerX: 500,
-          centerY: 500,
-          minRadius: 385,
-          maxRadius: 425,
-          minDuration: 8,
-          maxDuration: 10
+        this.blob = Blob.init({
+          element : self.$refs.blob,
+          numPoints: Math.floor(random(3, 5))
         })
       },
-      changeColor() {
+      changeColor () {
         let colors = [
           '#f44336',
           '#E91E63',
@@ -89,10 +83,10 @@
           '#FFC107',
           '#FF9800',
           '#FF5722'
-        ];
+        ]
 
-        this.colorNum = randomNotRepeat(colors.length, this.colorNum);
-        this.$refs.blob.style.fill = colors[this.colorNum];
+        this.colorNum = randomNotRepeat(colors.length, this.colorNum)
+        this.$refs.blob.style.fill = colors[this.colorNum]
         this.$refs.bg.style.backgroundColor = colors[this.colorNum]
       }
     }
