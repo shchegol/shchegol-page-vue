@@ -5,8 +5,8 @@
         <div class="col col-md-6">
           <div class="row">
             <header class="col text-center">
-              <p>Frontend Developer</p>
-              <h1 class="main-title">Alexander Shchegol</h1>
+              <p @click="initBlob">Frontend Developer</p>
+              <h1 class="main-title" @click="removeBlob">Alexander Shchegol</h1>
             </header>
           </div>
 
@@ -63,6 +63,9 @@
           element : self.$refs.blob,
           numPoints: Math.floor(random(3, 5))
         })
+      },
+      removeBlob() {
+        this.blob.destroy()
       },
       changeColor () {
         let colors = [
